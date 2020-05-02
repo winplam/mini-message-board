@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to Win's #{title}
+    ul
+        each msg in messages
+            li #{msg.user}: #{msg.text}
+            | #{msg.added}
+            br
+            br
+    a(href='/new') New Message

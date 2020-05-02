@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1= title
+    p Enter your message below:
+
+    // form takes users name and message and adds to the message board
+    form(method = "POST" action = "/new")
+        div.form-group
+            label(for = user) User:&nbsp;
+            input.form-control#name(type = "text", placeholder = "Name" name = "messageUser")
+            br
+        div.form-group
+            label(for = text) Text:&nbsp;
+            input.form-control#text(type = "text", placeholder = "Message" name = "messageText")
+            br
+            br
+            button(type = "submit") Submit
